@@ -1,35 +1,36 @@
 // Signup and Login javaScript
 let users = JSON.parse(localStorage.getItem("users")) || [];
 
-function signup() {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value.trim();
-  const message = document.getElementById("message");
+      function signup() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const message = document.getElementById("message");
 
-  if (!name || !email || !password) {
-    message.style.color = "red";
-    message.innerText = "Please fill all fields!";
-    return;
-  }
+        if (!name || !email || !password) {
+          message.style.color = "red";
+          message.innerText = "Please fill all fields!";
+          return;
+        }
 
-  const emailExists = users.find((user) => user.email === email);
-  if (emailExists) {
-    message.style.color = "red";
-    message.innerText = "Email already registered!";
-    return;
-  }
+        const emailExists = users.find((user) => user.email === email);
+        if (emailExists) {
+          message.style.color = "red";
+          message.innerText = "Email already registered!";
+          return;
+        }
 
-  users.push({ name, email, password });
-  localStorage.setItem("users", JSON.stringify(users));
+        users.push({ name, email, password });
+        localStorage.setItem("users", JSON.stringify(users));
 
-  message.style.color = "green";
-  message.innerText = "Signup successful! Redirecting...";
+        message.style.color = "green";
+        message.innerText = "Signup successful! Redirecting...";
 
-  setTimeout(() => {
-    window.location.href = "login.html";
-  }, 1500);
-}
+        setTimeout(() => {
+          window.location.href = "login.html";
+        }, 1500);
+      }
+
 
 function login() {
   const email = document.getElementById("loginEmail").value;
@@ -71,18 +72,14 @@ window.onload = function () {
   }
 };
 
+/* ================= LOGOUT ================= */
+
 function logout() {
   localStorage.removeItem("currentUser");
   window.location.href = "login.html";
 }
 
 // Home page
-const cartSidebar = document.getElementById("cart-sidebar");
-
-function toggleCart() {
-  cartSidebar.classList.toggle("active");
-}
-
 const categories = [
   {
     name: "Casual Wear",
