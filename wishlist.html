@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script async src="product.js"></script>
+    <link rel="stylesheet" href="product.css">
+     <link rel="stylesheet" href="home.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <h2><span>K</span>rist</h2>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="detail.html">Details</a></li>
+      <li><a href="#">Our Story</a></li>
+      <li><a href="product.html">Shop</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <span class="material-symbols-outlined">search</span>
+
+      <a href="wishlist.html">
+        <span class="material-symbols-outlined">favorite</span>
+      </a>
+
+      <a href="cart.html" class="cart-icon">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span id="cart-count" class="cart-count">0</span>
+      </a>
+
+      <button onclick="logout()" class="login-btn">Logout</button>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </nav>
+    <h2>Wishlist</h2>
+<div id="wishlist-items"></div>
+</body>
+</html>

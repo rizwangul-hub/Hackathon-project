@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krist | Home</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="home.css">
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo">
+      <h2><span>K</span>rist</h2>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="detail.html">Shop</a></li>
+      <li><a href="#">Our Story</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+
+    <div class="nav-right">
+
+      <span class="material-symbols-outlined">search</span>
+
+      <a href="wishlist.html" class="icon-wrapper">
+        <span class="material-symbols-outlined">favorite</span>
+        <span class="badge" id="wishlist-count">0</span>
+      </a>
+
+      <a href="cart.html" class="icon-wrapper">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span class="badge" id="cart-count">0</span>
+      </a>
+
+      <button class="login-btn" id="logoutBtn">Logout</button>
+
+      <div class="menu-toggle" id="menuToggle">
+        ☰
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- PRODUCTS -->
+  <section class="products-section">
+    <div id="product-container" class="product-grid"></div>
+
+    <div class="pagination">
+      <button id="prevBtn">Prev</button>
+      <button id="nextBtn">Next</button>
+    </div>
+  </section>
+
+
+  <!-- JS (Put at bottom) -->
+  <script src="product.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

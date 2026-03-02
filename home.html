@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hakhathon</title>
+  <script async src="script.js"></script>
+  <link rel="stylesheet" href="home.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <h2><span>K</span>rist</h2>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="detail.html">Details</a></li>
+      <li><a href="#">Our Story</a></li>
+      <li><a href="product.html">Shop</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <span class="material-symbols-outlined">search</span>
+
+      <a href="wishlist.html">
+        <span class="material-symbols-outlined">favorite</span>
+      </a>
+
+      <a href="cart.html" class="cart-icon">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span id="cart-count" class="cart-count">0</span>
+      </a>
+
+      <button onclick="logout()" class="login-btn">Logout</button>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </nav>
+
+  <div class="slider-container">
+    <div class="slider-wrapper" id="sliderWrapper">
+      <div class="slide"><img src="cart-image/sidebar-1.jpg" alt="" /></div>
+      <div class="slide"><img src="cart-image/sidebar-1.jpg" alt="" /></div>
+      <div class="slide"><img src="cart-image/sidebar-1.jpg" alt="" /></div>
+    </div>
+
+    <button class="nav-btn prev" id="prevBtn">&#10094;</button>
+    <button class="nav-btn next" id="nextBtn">&#10095;</button>
+  </div>
+
+  <section class="categories">
+    <div class="section-header">
+      <h2>Shop by Categories</h2>
+      <div class="arrows">
+        <button id="prev">←</button>
+        <button id="next">→</button>
+      </div>
+    </div>
+
+    <div class="card-container" id="cardContainer"></div>
+  </section>
+
+  <section class="products-section">
+    <h2>Featured Products</h2>
+    <div class="products-container" id="productsContainer"></div>
+  </section>
+
+  <section class="hero-deal-section">
+    <div class="deal-glass-card">
+      <h2>Flash Sale Event</h2>
+      <p>Exclusive items for limited time</p>
+
+      <div class="timer-grid">
+        <div class="time-box"><span id="days">00</span><small>Days</small></div>
+        <div class="time-box"><span id="hours">00</span><small>Hrs</small></div>
+        <div class="time-box"><span id="mins">00</span><small>Mins</small></div>
+        <div class="time-box"><span id="secs">00</span><small>Secs</small></div>
+      </div>
+
+      <button class="cta-button">Grab The Deal</button>
+    </div>
+  </section>
+
+  <section class="customer-reviews">
+    <h2>Customer Reviews</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <p>"Amazing product! It exceeded my expectations."</p>
+        <div class="stars">★★★★★</div>
+        <h4>— Sarah J.</h4>
+      </div>
+
+      <div class="review-card">
+        <p>"Fast delivery and great customer service."</p>
+        <div class="stars">★★★★☆</div>
+        <h4>— Michael T.</h4>
+      </div>
+
+      <div class="review-card">
+        <p>"High-quality and exactly as described."</p>
+        <div class="stars">★★★★★</div>
+        <h4>— Aisha K.</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Ecommerce. Developed by Rizwan</p>
+  </footer>
+
+  <script>
+    // 🔒 Protect Page
+    const currentUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (!currentUser) {
+      window.location.href = "signup.html";
+    }
+
+    // 🛒 Update Cart Count
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const total = cart.reduce((acc, item) => acc + item.quantity, 0);
+      const countEl = document.getElementById("cart-count");
+      if (countEl) countEl.innerText = total;
+    }
+
+    // 🚪 Logout
+    function logout() {
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "signup.html";
+    }
+
+    document.addEventListener("DOMContentLoaded", updateCartCount);
+  </script>
+
+</body>
+</html>

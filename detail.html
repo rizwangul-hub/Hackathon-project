@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="detail.css">
+     <link rel="stylesheet" href="home.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <h2><span>K</span>rist</h2>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="detail.html">Details</a></li>
+      <li><a href="#">Our Story</a></li>
+      <li><a href="product.html">Shop</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <span class="material-symbols-outlined">search</span>
+
+      <a href="wishlist.html">
+        <span class="material-symbols-outlined">favorite</span>
+      </a>
+
+      <a href="cart.html" class="cart-icon">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span id="cart-count" class="cart-count">0</span>
+      </a>
+
+      <button onclick="logout()" class="login-btn">Logout</button>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </nav>
+    <div class="ProductWithName">
+      <div class="productName" id="">
+        <div class="filter-group">
+          <div class="filter-header">
+            <h3>Category</h3>
+            <span class="arrow-up"></span>
+          </div>
+          <ul class="filter-list">
+            <li>Mobile accessory</li>
+            <li>Electronics</li>
+            <li>Smartphones</li>
+            <li>Modern tech</li>
+            <li class="see-all">See all</li>
+          </ul>
+        </div>
+
+        <hr />
+
+        <div class="filter-group">
+          <div class="filter-header">
+            <h3>Brands</h3>
+            <span class="arrow-up"></span>
+          </div>
+          <ul class="filter-list">
+            <li><input type="checkbox" /> Samsung</li>
+            <li><input type="checkbox" /> Apple</li>
+            <li><input type="checkbox" /> Huawei</li>
+            <li><input type="checkbox" /> Pocco</li>
+            <li><input type="checkbox" /> Lenovo</li>
+            <li class="see-all">See all</li>
+          </ul>
+        </div>
+
+        <hr />
+
+        <div class="filter-group">
+          <div class="filter-header">
+            <h3>Price range</h3>
+          </div>
+          <div class="price-inputs">
+            <div class="input-box">
+              <label>Min</label>
+              <input type="number" placeholder="0" />
+            </div>
+            <div class="input-box">
+              <label>Max</label>
+              <input type="number" placeholder="999999" />
+            </div>
+          </div>
+          <button class="apply-btn">Apply</button>
+        </div>
+
+        <hr />
+
+        <div class="filter-group">
+          <div class="filter-header">
+            <h3>Condition</h3>
+          </div>
+          <ul class="filter-list">
+            <li><input type="radio" name="condition" checked /> Any</li>
+            <li><input type="radio" name="condition" /> Refurbished</li>
+            <li><input type="radio" name="condition" /> Brand new</li>
+            <li><input type="radio" name="condition" /> Old items</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ratings</h4>
+          <img src="product-image/image/Group 997.png" alt="" />
+        </div>
+      </div>
+
+      <div class="proNav">
+        <nav>
+          <p>12,911 items in Mobile accessory</p>
+          <div class="input">
+            <div><input type="checkbox" /><span>Verified only</span></div>
+            <select name="" id="">
+              <option value="">Featured</option>
+            </select>
+            <div>
+              <img
+                src="product-image/image/btn-group.png"
+                alt=""
+                onclick="show1()"
+              />
+              <img
+                src="product-image/image/btn-group copy.png"
+                alt=""
+                onclick="show2()"
+              />
+            </div>
+          </div>
+        </nav>
+        <div class="Both">
+          <div class="productCard">
+            <div class="products">
+              <img
+                src="product-image/image/image 33.png"
+                alt=""
+                class="proImg"
+              />
+              <div class="productDetails">
+                <h4>Canon Cmera EOS 2000, Black 10x zoom</h4>
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/image/Group 989.png"
+                  alt=""
+                  class="star"
+                />
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                </p>
+                <h3 onclick="view('product-image/image/image 33.png')">
+                  View details
+                </h3>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(0)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+            <div class="products">
+              <img
+                src="product-image/image/image 32.png"
+                class="proImg"
+                alt=""
+              />
+              <div class="productDetails">
+                <h4>Canon Cmera EOS 2000, Black 10x zoom</h4>
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/image/Group 989.png"
+                  alt=""
+                  class="star"
+                />
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                </p>
+                <h3 onclick="view('product-image/image/image 32.png')">
+                  View details
+                </h3>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(1)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+            <div class="products">
+              <img
+                src="product-image/image/image 34.png"
+                class="proImg"
+                alt=""
+              />
+              <div class="productDetails">
+                <h4>Canon Cmera EOS 2000, Black 10x zoom</h4>
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/image/Group 989.png"
+                  alt=""
+                  class="star"
+                />
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                </p>
+                <h3 onclick="view('product-image/image/image 34.png')">
+                  View details
+                </h3>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(2)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+            <div class="products">
+              <img
+                src="product-image/image/image 35.png"
+                class="proImg"
+                alt=""
+              />
+              <div class="productDetails">
+                <h4>Canon Cmera EOS 2000, Black 10x zoom</h4>
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/image/Group 989.png"
+                  alt=""
+                  class="star"
+                />
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                </p>
+                <h3 onclick="view('product-image/image/image 35.png')">
+                  View details
+                </h3>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(3)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+            <div class="products">
+              <img
+                src="product-image/image/image 23.png"
+                class="proImg"
+                alt=""
+              />
+              <div class="productDetails">
+                <h4>Canon Cmera EOS 2000, Black 10x zoom</h4>
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/image/Group 989.png"
+                  alt=""
+                  class="star"
+                />
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                </p>
+                <h3 onclick="view('product-image/image/image 23.png')">
+                  View details
+                </h3>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(4)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+            <div class="products">
+              <img
+                src="product-image/image/image 86.png"
+                class="proImg"
+                alt=""
+              />
+              <div class="productDetails">
+                <h4>Canon Cmera EOS 2000, Black 10x zoom</h4>
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/image/Group 989.png"
+                  alt=""
+                  class="star"
+                />
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                </p>
+                <h3 onclick="view('product-image/image/image 86.png')">
+                  View details
+                </h3>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(5)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="productCart">
+          <div class="product">
+            <img
+              src="product-image/image/image 33.png"
+              alt=""
+              class="itemImg"
+            />
+            <div class="withHert">
+              <div class="productDetail">
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/icons/rating.png"
+                  alt=""
+                  class="stars"
+                />
+                <p>GoPro HERO6 4K Action Camera - Black</p>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(6)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="product-image/image/image 32.png"
+              class="itemImg"
+              alt=""
+            />
+            <div class="withHert">
+              <div class="productDetail">
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/icons/rating.png"
+                  alt=""
+                  class="stars"
+                />
+                <p>GoPro HERO6 4K Action Camera - Black</p>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(7)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="product-image/image/image 34.png"
+              class="itemImg"
+              alt=""
+            />
+            <div class="withHert">
+              <div class="productDetail">
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/icons/rating.png"
+                  alt=""
+                  class="stars"
+                />
+                <p>GoPro HERO6 4K Action Camera - Black</p>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(8)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="product-image/image/image 35.png"
+              class="itemImg"
+              alt=""
+            />
+            <div class="withHert">
+              <div class="productDetail">
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/icons/rating.png"
+                  alt=""
+                  class="stars"
+                />
+                <p>GoPro HERO6 4K Action Camera - Black</p>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(9)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="product-image/image/image 23.png"
+              class="itemImg"
+              alt=""
+            />
+            <div class="withHert">
+              <div class="productDetail">
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/icons/rating.png"
+                  alt=""
+                  class="stars"
+                />
+                <p>GoPro HERO6 4K Action Camera - Black</p>
+                <p>GoPro HERO6 4K Action Camera - Black</p>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(10)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="product-image/image/image 86.png"
+              class="itemImg"
+              alt=""
+            />
+            <div class="withHert">
+              <div class="productDetail">
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/icons/rating.png"
+                  alt=""
+                  class="stars"
+                />
+                <p>GoPro HERO6 4K Action Camera - Black</p>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(11)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="product-image/image/image 35.png"
+              class="itemImg"
+              alt=""
+            />
+            <div class="withHert">
+              <div class="productDetail">
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/icons/rating.png"
+                  alt=""
+                  class="stars"
+                />
+                <p>GoPro HERO6 4K Action Camera - Black</p>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(12)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="product-image/image/image 23.png"
+              class="itemImg"
+              alt=""
+            />
+            <div class="withHert">
+              <div class="productDetail">
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/icons/rating.png"
+                  alt=""
+                  class="stars"
+                />
+                <p>GoPro HERO6 4K Action Camera - Black</p>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(13)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="product-image/image/image 86.png"
+              class="itemImg"
+              alt=""
+            />
+            <div class="withHert">
+              <div class="productDetail">
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/icons/rating.png"
+                  alt=""
+                  class="stars"
+                />
+                <p>GoPro HERO6 4K Action Camera - Black</p>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(14)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="product-image/image/image 34.png"
+              class="itemImg"
+              alt=""
+            />
+            <div class="withHert">
+              <div class="productDetail">
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/icons/rating.png"
+                  alt=""
+                  class="stars"
+                />
+                <p>GoPro HERO6 4K Action Camera - Black</p>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(15)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="product-image/image/image 33.png"
+              class="itemImg"
+              alt=""
+            />
+            <div class="withHert">
+              <div class="productDetail">
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/icons/rating.png"
+                  alt=""
+                  class="stars"
+                />
+                <p>GoPro HERO6 4K Action Camera - Black</p>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(16)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="product-image/image/image 32.png"
+              class="itemImg"
+              alt=""
+            />
+            <div class="withHert">
+              <div class="productDetail">
+                <h2>
+                  $998.00
+                  <span style="color: #8b96a5; font-size: 16px"
+                    ><del>$1128.00</del></span
+                  >
+                </h2>
+                <img
+                  src="product-image/icons/rating.png"
+                  alt=""
+                  class="stars"
+                />
+                <p>GoPro HERO6 4K Action Camera - Black</p>
+              </div>
+              <img
+                class="heart"
+                onclick="heart(17)"
+                src="product-image/icons/btn-basic.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="view">
+        <nav class="dressnav">
+          <div onclick="home()">Home</div>
+          <div>&GreaterGreater;</div>
+          <div>Clothings</div>
+          <div>&GreaterGreater;</div>
+          <div>Men’s wear</div>
+          <div>&GreaterGreater;</div>
+          <div>Summer clothing</div>
+        </nav>
+        <div class="product-container">
+          <div class="gallery">
+            <div class="main-image">
+              <img
+                src="product-image/image/image 34 copy.png"
+                alt=""
+                id="imageDetail"
+              />
+            </div>
+            <div class="thumbnails">
+              <img src="product-image/image/Gallery (17).png" alt="" />
+            </div>
+          </div>
+
+          <div class="details">
+            <p class="stock-status">✓ In stock</p>
+            <h1>Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle</h1>
+
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span class="score">9.3</span> • 32 reviews • 154 sold
+            </div>
+
+            <div class="price-table">
+              <div class="price-box highlight">
+                <p class="price">$98.00</p>
+                <p class="moq">50-100 pcs</p>
+              </div>
+              <div class="price-box">
+                <p class="price">$90.00</p>
+                <p class="moq">100-700 pcs</p>
+              </div>
+              <div class="price-box">
+                <p class="price">$78.00</p>
+                <p class="moq">700+ pcs</p>
+              </div>
+            </div>
+
+            <table class="specs">
+              <tr>
+                <td>Price:</td>
+                <td>Negotiable</td>
+              </tr>
+              <tr>
+                <td>Type:</td>
+                <td>Classic shoes</td>
+              </tr>
+              <tr>
+                <td>Material:</td>
+                <td>Plastic material</td>
+              </tr>
+              <tr>
+                <td>Design:</td>
+                <td>Modern nice</td>
+              </tr>
+            </table>
+
+            <hr />
+
+            <table class="specs">
+              <tr>
+                <td>Customization:</td>
+                <td>Customized logo and design custom packages</td>
+              </tr>
+              <tr>
+                <td>Protection:</td>
+                <td>Refund Policy</td>
+              </tr>
+              <tr>
+                <td>Warranty:</td>
+                <td>2 years full warranty</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="sidebar">
+            <div class="supplier-card">
+              <div class="supplier-header">
+                <div class="avatar">R</div>
+                <div>
+                  <p class="label">Supplier</p>
+                  <p class="name">Guanjoi Trading LLC</p>
+                </div>
+              </div>
+              <ul class="supplier-info">
+                <li>🇩🇪 Germany, Berlin</li>
+                <li>🛡️ Verified Seller</li>
+                <li>🌐 Worldwide shipping</li>
+              </ul>
+              <button class="btn-primary">Send inquiry</button>
+              <button class="btn-secondary">Seller's profile</button>
+            </div>
+            <button class="btn-text">♡ Save for later</button>
+          </div>
+        </div>
+
+    <div class="develop">
+      <p>© 2026 Ecommerce.</p>
+      <h3>Developed by Rizwan</h3>
+      <div>
+        <img src="image/flage/icon.png" alt="" />
+        <select>
+          <option value="">English</option>
+        </select>
+      </div>
+    </div>
+</body>
+ <script>
+    function show1() {
+      document.getElementsByClassName("productCard")[0].style.display = "none";
+      document.getElementsByClassName("productCart")[0].style.display = "flex";
+    }
+    function show2() {
+      document.getElementsByClassName("productCard")[0].style.display = "flex";
+      document.getElementsByClassName("productCart")[0].style.display = "none";
+    }
+    function order() {
+      document.getElementsByClassName("holeOrder")[0].style.display = "flex";
+      document.getElementsByClassName('view')[0].style.display = "none";
+      document.getElementsByClassName("ProductWithName")[0].style.display =
+        "none";
+    }
+    function view(url) {
+      document.getElementsByClassName("view")[0].style.display = "flex";
+      document.getElementsByClassName("proNav")[0].style.display = "none";
+      document.getElementsByClassName("holeOrder")[0].style.display = "none";
+      document.getElementsByClassName("page")[0].style.display = "none";
+      document.getElementsByClassName("ProductWithName")[0].style.display ="none";
+      document.getElementById("imageDetail").setAttribute("src", url);
+    }
+
+    function home() {
+      document.getElementsByClassName("view")[0].style.display = "none";
+      document.getElementsByClassName("proNav")[0].style.display = "flex";
+      document.getElementsByClassName("holeOrder")[0].style.display = "flex";
+      document.getElementsByClassName("page")[0].style.display = "flex";
+      document.getElementsByClassName("ProductWithName")[0].style.display =
+        "flex";
+    }
+
+    function heart(index) {
+      document.getElementsByClassName("heart")[index].style.backgroundColor =
+        "red";
+    }
+  </script>
+</html>
