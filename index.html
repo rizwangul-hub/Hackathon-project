@@ -1,35 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hakethan</title>
-    <link rel="stylesheet" href="style.css">
-    <script async src="script.js"></script>
-</head>
-<body>
-    <header>
-        
-    </header>
-    <h2>Sign Up</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo">MyWebsite</a>
+      <div class="nav-links">
+        <a
+          href="login.html"
+          style="color: #4a90e2; text-decoration: none; margin-right: 15px"
+          >Login</a
+        >
+      </div>
+    </nav>
 
-<form id="signupForm">
-  <input type="text" id="name" placeholder="Enter Name" required><br><br>
-  <input type="email" id="email" placeholder="Enter Email" required><br><br>
-  <input type="password" id="password" placeholder="Enter Password" required><br><br>
-  <button type="submit">Sign Up</button>
-</form>
+    <div class="auth-wrapper">
+      <div class="form-container">
+        <div class="form-box">
+          <h2>Create Account</h2>
+          <p>Join us today. It's free!</p>
 
+          <form onsubmit="handleSignup(event)">
+            <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                id="signup-name"
+                placeholder="Full Name"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                id="signup-email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                id="signup-pass"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+          </form>
 
-<h2>Sign In</h2>
+          <p class="switch-text">
+            Already have an account? <a href="login.html">Login here</a>
+          </p>
+        </div>
+      </div>
 
-<form id="signinForm">
-  <input type="email" id="loginEmail" placeholder="Enter Email" required><br><br>
-  <input type="password" id="loginPassword" placeholder="Enter Password" required><br><br>
-  <button type="submit">Sign In</button>
-</form>
+      <div class="image-container">
+        <img
+          src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80"
+          alt="Side Image"
+        />
+        <div class="overlay">
+          <h1>Start Your Journey</h1>
+          <p>Create an account to access all features.</p>
+        </div>
+      </div>
+    </div>
 
-<button onclick="logout()">Logout</button>
-    
-</body>
+    <script src="auth.js"></script>
+  </body>
 </html>

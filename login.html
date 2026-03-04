@@ -1,31 +1,55 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css" />
-    <script async src="script.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="form">
-        <h2>Login</h2>
-        <form id="loginForm">
-          <div class="inputField">
-            <label for="loginEmail">Your Email :</label>
-            <input type="email" id="loginEmail" placeholder="Email" required />
-            <label for="loginPassword">Set Password:</label>
-            <input type="password" id="loginPassword" placeholder="Password" required />
-          </div>
-          <button type="submit">Login</button>
-          <p id="loginMessage"></p>
-        </form>
-        <p>
-          Don't have an account?
-          <a href="signup.html">Sign Up</a>
-        </p>
-      </div>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">MyWebsite</a>
+        <div class="nav-links">
+            <a href="index.html" style="color: #4a90e2; text-decoration: none; margin-right: 15px;">Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="auth-wrapper">
+        
+        <div class="form-container">
+            <div class="form-box">
+                <h2>Welcome Back</h2>
+                <p>Please enter your details to login.</p>
+                
+                <form onsubmit="handleLogin(event)">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="login-email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="login-pass" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+
+                <p class="switch-text">
+                    Don't have an account? <a href="index.html">Sign up here</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop" alt="Side Image">
+            <div class="overlay">
+                <h1>Good to See You Again</h1>
+                <p>Log in to continue your progress.</p>
+            </div>
+        </div>
     </div>
-  </body>
+
+    <script src="auth.js"></script>
+</body>
 </html>

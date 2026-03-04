@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hakhathon</title>
-  <script async src="script.js"></script>
+  <script async src="auth.js"></script>
   <link rel="stylesheet" href="home.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
@@ -28,15 +28,16 @@
     </ul>
 
     <div class="nav-right">
-      <span class="material-symbols-outlined">search</span>
+      <input type="text" id="searchInput" class="search-input" placeholder="Search products..." />
+      <span class="material-symbols-outlined" onclick="searchProducts()">search</span>
 
       <a href="wishlist.html">
-        <span class="material-symbols-outlined">favorite</span>
+      <span class="material-symbols-outlined">favorite</span>
       </a>
 
       <a href="cart.html" class="cart-icon">
-        <span class="material-symbols-outlined">shopping_bag</span>
-        <span id="cart-count" class="cart-count">0</span>
+      <span class="material-symbols-outlined">shopping_bag</span>
+      <span id="cart-count" class="cart-count">0</span>
       </a>
 
       <button onclick="logout()" class="login-btn">Logout</button>
@@ -47,9 +48,9 @@
 
   <div class="slider-container">
     <div class="slider-wrapper" id="sliderWrapper">
-      <div class="slide"><img src="cart-image/sidebar-1.jpg" alt="" /></div>
-      <div class="slide"><img src="cart-image/sidebar-1.jpg" alt="" /></div>
-      <div class="slide"><img src="cart-image/sidebar-1.jpg" alt="" /></div>
+      <div class="slide"><img src="https://images.pexels.com/photos/974964/pexels-photo-974964.jpeg" alt="" /></div>
+      <div class="slide"><img src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg" alt="" /></div>
+      <div class="slide"><img src="https://images.pexels.com/photos/1884584/pexels-photo-1884584.jpeg" alt="" /></div>
     </div>
 
     <button class="nav-btn prev" id="prevBtn">&#10094;</button>
@@ -115,15 +116,31 @@
   <footer>
     <p>© 2026 Ecommerce. Developed by Rizwan</p>
   </footer>
+ 
 
   <script>
-    // 🔒 Protect Page
-    const currentUser = JSON.parse(localStorage.getItem("loggedInUser"));
-    if (!currentUser) {
-      window.location.href = "signup.html";
-    }
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const total = cart.reduce((acc, item) => acc + item.quantity, 0);
+    const countEl = document.getElementById("cart-count");
+    if (countEl) countEl.innerText = total;
+  }
 
-    // 🛒 Update Cart Count
+  function searchProducts() {
+    const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    if (searchInput.trim() === "") {
+      alert("Please enter a search term");
+      return;
+    }
+    window.location.href = `product.html?search=${encodeURIComponent(searchInput)}`;
+  }
+
+  function logout() {
+    localStorage.removeItem("loggedInUser");
+    window.location.href = "signup.html";
+  }
+
+  document.addEventListener("DOMContentLoaded", updateCartCount);
     function updateCartCount() {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
       const total = cart.reduce((acc, item) => acc + item.quantity, 0);
@@ -131,7 +148,15 @@
       if (countEl) countEl.innerText = total;
     }
 
-    // 🚪 Logout
+    function searchProducts() {
+      const searchInput = document.getElementById("searchInput").value.toLowerCase();
+      if (searchInput.trim() === "") {
+        alert("Please enter a search term");
+        return;
+      }
+      window.location.href = `product.html?search=${encodeURIComponent(searchInput)}`;
+    }
+
     function logout() {
       localStorage.removeItem("loggedInUser");
       window.location.href = "signup.html";
@@ -139,6 +164,9 @@
 
     document.addEventListener("DOMContentLoaded", updateCartCount);
   </script>
-
+ <script  src="script.js"></script>
+ <script src="product.js"></script>
 </body>
+
+
 </html>

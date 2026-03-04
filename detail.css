@@ -4,8 +4,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
-/* Sidebar / Filters */
 .ProductWithName {
   display: flex;
   padding: 15px;
@@ -118,7 +116,6 @@ hr {
   margin: 15px 0;
 }
 
-/* Product Navigation */
 .proNav {
   display: flex;
   flex-direction: column;
@@ -154,7 +151,6 @@ hr {
   padding: 10px;
 }
 
-/* Product Cards */
 .productCard {
   display: none;
   flex-direction: column;
@@ -214,7 +210,6 @@ hr {
   filter: drop-shadow(0px 0px 5px gold);
 }
 
-/* Product Cart */
 .productCart {
   display: flex;
   flex-wrap: wrap;
@@ -250,7 +245,6 @@ hr {
   height: 250px;
 }
 
-/* Product Detail / View */
 .view {
   display: none;
   flex-direction: column;
@@ -322,7 +316,6 @@ table.specs td:first-child {
   width: 120px;
 }
 
-/* Sidebar */
 .sidebar {
   flex: 1;
   min-width: 240px;
